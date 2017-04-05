@@ -13,6 +13,6 @@ public class Go {
 	public static void main(String[] args) {
 		Game hi = new Game();
 		hi.play();
-	}
+	};
 
 }
