@@ -1,6 +1,6 @@
 /**
  * A simple method to create and start a game
- * @author Richard Poore
+ * @author Mr. Poore
  *
  */
 public class Go {
