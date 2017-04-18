@@ -21,6 +21,7 @@ public class Inventory {
 	 * 
 	 * @param items the number of Items the 
 	 * inventory can hold
+	 * 
 	 */
 	public Inventory(int items)
 	{
