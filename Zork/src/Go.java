@@ -2,7 +2,6 @@
  * A simple method to create and start a game
  * @author Mr. Poore
  *
- * Hopefully line feeds are better now
  */
 public class Go {
 
