@@ -19,7 +19,7 @@ public class Item {
 	}
 	
 	/**
-	 * Creates an item will all of its attributes
+	 * Creates an item with all of its attributes
 	 * 
 	 * @param name = the name of the object
 	 * @param att = the attack additive points
@@ -32,6 +32,22 @@ public class Item {
 		this.setAtt(att);
 		this.setDef(def);
 		this.setKeyNum(keyNum);
+	}
+	/**
+	 * Creates a non-key item with all of its 
+	 * attributes
+	 * 
+	 * @param name = the name of the object
+	 * @param att = the attack additive points
+	 * @param def = the defense additive points
+	 * 
+	 */
+	public Item(String name, int att, int def)
+	{
+		this.name = name;
+		this.setAtt(att);
+		this.setDef(def);
+		this.setKeyNum(-1);
 	}
 	
 	public String getName() {
