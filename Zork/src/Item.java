@@ -13,9 +13,9 @@ public class Item {
 	public Item(String name)
 	{
 		this.name = name;
-		att = 0;
-		def = 0;
-		keyNum = -1;
+		setAtt(0);
+		setDef(0);
+		setKeyNum(-1);
 	}
 	
 	/**
@@ -29,13 +29,37 @@ public class Item {
 	public Item(String name, int att, int def, int keyNum)
 	{
 		this.name = name;
-		this.att = att;
-		this.def = def;
-		this.keyNum = keyNum;
+		this.setAtt(att);
+		this.setDef(def);
+		this.setKeyNum(keyNum);
 	}
 	
 	public String getName() {
 		return name;
+	}
+
+	public int getAtt() {
+		return att;
+	}
+
+	public void setAtt(int att) {
+		this.att = att;
+	}
+
+	public int getDef() {
+		return def;
+	}
+
+	public void setDef(int def) {
+		this.def = def;
+	}
+
+	public int getKeyNum() {
+		return keyNum;
+	}
+
+	public void setKeyNum(int keyNum) {
+		this.keyNum = keyNum;
 	}
 	
 	
