@@ -14,7 +14,7 @@ public class TestInventory {
 		thisInv.add(new Item("Gate Key", 0, 0, 7));
 		thisInv.add(new Item("Shield", 1, 5, -1));
 		thisInv.add(new Item("Sword", 5, 1, -1));
-		thisInv.add(new Item("Suite of Armor", -1, 7, -1));
+		thisInv.add(new Item("Suit of Armor", -1, 7, -1));
 	}
 	
 	@Test
