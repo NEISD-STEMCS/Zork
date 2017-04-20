@@ -179,7 +179,7 @@ class Game
 		int index = -1;
 		do
 		{
-			System.out.println("Which item would you like to pick up?");
+			System.out.println("Which item would you like to pick up? (-1 if you're done)");
 			currentRoom.getInv().display();
 			int itemIndex = input.nextInt();
 		} while (index >= 0);

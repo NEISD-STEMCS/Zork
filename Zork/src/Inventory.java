@@ -86,13 +86,22 @@ public class Inventory {
 		}
 	}
 	
+	/**
+	 * pickUp accepts an inventory and an index, picks up the specified item and 
+	 * returns the index where it was place
+	 * @param srcInv The source inventory
+	 * @param index The index of the object to be picked up
+	 * @return The index where the object was placed
+	 */
 	public int pickUp(Inventory srcInv, int index)
 	{
 		int destIndex = this.add(srcInv.get(index));
 		return destIndex;
 	}
 	
-	
+	/**
+	 * Displays the index and item description for each item in the inventory
+	 */
 	public void display()
 	{
 		for (int i = 0; i < size; i++)
@@ -100,5 +109,20 @@ public class Inventory {
 			System.out.printf("%2d\t%s\n", i, inv[i].getName());
 		}
 	}
+	
+	/**
+	 * Returns the index of an item with the specified string in its description
+	 * @param keyword the word to look for
+	 * @return the index where the item was placed
+	 */
+	public int find(String keyword) {
+		for (int i = 0; i < size; i++)
+		{
+			if (inv[i].getName().indexOf(keyword)>=0)
+				return i;
+		}
+		return -1;
+	}
+	
 	
 }

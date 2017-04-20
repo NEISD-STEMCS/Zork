@@ -18,6 +18,11 @@ public class TestInventory {
 	}
 	
 	@Test
+	public void testFind() {
+		assertEquals(3, thisInv.find("Armor"));
+	}
+	
+	@Test
 	public void testSize() {
 		thisInv.display();
 		assert(thisInv.getSize()==4);
@@ -30,4 +35,6 @@ public class TestInventory {
 		assert(thisInv.getSize()==3);
 		assert(thisInv.get(1).getName().equals("Sword"));
 	}
+	
+
 }
