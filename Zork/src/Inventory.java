@@ -137,5 +137,22 @@ public class Inventory
 		}
 		return -1;
 	}
+	
+	/**
+	 * Checks whether the inventory contains
+	 * a key of keynum
+	 * 
+	 * @param keyNum The number of the key 
+	 * we're searching for
+	 * @return returns true or false, whether we found the key
+	 */
+	public boolean hasKey(int keyNum)
+	{
+		for (int i = 0; i < size; i++)
+			if(inv[i].getKeyNum()==keyNum)
+				return true;
+		
+		return false;
+	}
 
 }
