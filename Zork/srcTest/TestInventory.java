@@ -36,5 +36,17 @@ public class TestInventory {
 		assert(thisInv.get(1).getName().equals("Sword"));
 	}
 	
+	@Test
+	public void testPickup()
+	{
+		int s = thisInv.getSize(); 
+		Inventory newInv = new Inventory();
+		newInv.pickUp(thisInv, 1);
+		assertEquals(1, newInv.getSize());
+		assertEquals(s-1, thisInv.getSize());
 
+	}
+	
+	
+	
 }

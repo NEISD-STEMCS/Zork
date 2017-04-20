@@ -23,6 +23,8 @@ class Game
 	private Parser parser;
 	private Room currentRoom;
 	private Inventory inv = new Inventory(15);
+	private Inventory armor = new Inventory (3);
+	private Inventory weapons = new Inventory(2);
 
 	/**
 	 * Create the game and initialize its internal map.
@@ -55,8 +57,12 @@ class Game
 		office.setExits(null, null, null, gblock);
 
 		// Set Items to inventory
-		outside.getInv().add(new Item("Gate Key", 0, 0, 7));
-
+//		outside.getInv().add(new Item("Gate Key", 0, 0, 7));
+		Inventory disInv = outside.getInv();
+		Item dis = new Item("Gate Key", 0, 0, 7);
+		disInv.add(dis);
+		
+		
 		currentRoom = outside; // start game outside
 	}
 
@@ -110,8 +116,10 @@ class Game
 		}
 
 		String commandWord = command.getCommandWord();
-		if (commandWord.equals("help"))
+		if (commandWord.equals("help")){
 			printHelp();
+			pickUpUI();
+		}
 		else if (commandWord.equals("go"))
 		{
 			inv.add(new Item("Gate Key", 0, 0, 7));
@@ -173,7 +181,7 @@ class Game
 	/**
 	 * Picks up an item from the current Room (with UI)
 	 */
-	private void pickUpUI()
+	public void pickUpUI()
 	{
 		Scanner input = new Scanner(System.in);
 		int index = -1;
@@ -182,6 +190,8 @@ class Game
 			System.out.println("Which item would you like to pick up? (-1 if you're done)");
 			currentRoom.getInv().display();
 			int itemIndex = input.nextInt();
+			if (itemIndex >0 && itemIndex < currentRoom.getInv().getSize())
+				inv.pickUp(currentRoom.getInv(), itemIndex);
 		} while (index >= 0);
 	}
 }

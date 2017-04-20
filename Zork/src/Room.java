@@ -31,6 +31,7 @@ class Room
     {
         this.description = description;
         exits = new HashMap();
+        inv = new Inventory();
     }
 
     /**
