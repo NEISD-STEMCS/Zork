@@ -96,6 +96,7 @@ public class Inventory {
 	public int pickUp(Inventory srcInv, int index)
 	{
 		int destIndex = this.add(srcInv.get(index));
+		srcInv.remove(index);
 		return destIndex;
 	}
 	
